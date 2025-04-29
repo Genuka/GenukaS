@@ -1,94 +1,83 @@
-/* Reset & Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f0f4f8;
-  color: #333;
-  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
 }
 
-/* Header */
 header {
-  background: linear-gradient(to right, #4CAF50, #2E7D32);
+  background-color: #2E7D32;
   color: white;
-  padding: 2rem 1rem;
-  text-align: center;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  border: 3px solid #fff;
   object-fit: cover;
+  border: 3px solid white;
 }
 
-/* Container */
 .container {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 2rem auto;
   padding: 1rem;
 }
 
-/* Section Titles */
-h2 {
-  text-align: center;
-  color: #2E7D32;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-/* Cards */
-.card {
+.year-card {
   background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+.year-card h2 {
+  margin-top: 0;
+  color: #2E7D32;
 }
 
-.card h3 {
-  color: #4CAF50;
-  margin-bottom: 0.5rem;
+.year-summary {
+  font-style: italic;
+  color: #555;
 }
 
-/* Footer */
+.topics {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.topic-card {
+  display: block;
+  background: #e8f5e9;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1b5e20;
+  transition: transform 0.2s, background 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.topic-card:hover {
+  transform: scale(1.02);
+  background: #d0f0d0;
+}
+
 footer {
-  background-color: #4CAF50;
-  color: white;
   text-align: center;
   padding: 1rem;
-  margin-top: 3rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-  }
+  background-color: #2E7D32;
+  color: white;
 }
