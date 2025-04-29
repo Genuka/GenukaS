@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif;
+  background-color: #f0f8ff;
+  padding: 30px;
+}
+h1 {
+  color: #3333cc;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
