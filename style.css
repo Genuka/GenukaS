@@ -1,4 +1,15 @@
-/* Top bar styling */
+/* Base styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- TOP BAR --- */
 .top-bar {
   background: #0d47a1;
   color: white;
@@ -25,21 +36,49 @@
   font-size: 0.85rem;
 }
 
-.home-button, .home-title {
+.home-title {
   background: #1976d2;
   padding: 0.4rem 1rem;
   border-radius: 6px;
-  text-decoration: none;
-  color: white;
   font-weight: bold;
-  transition: background 0.2s;
 }
 
-.home-button:hover {
-  background: #1565c0;
+/* --- HEADER --- */
+header {
+  background: #1e88e5;
+  color: white;
+  padding: 2rem;
+  text-align: center;
 }
 
-/* Year and topic cards */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+/* --- CONTAINER --- */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* --- CARDS --- */
 .year-card, .topic-card {
   background: white;
   border-radius: 16px;
@@ -50,6 +89,7 @@
   color: inherit;
   display: block;
   border-left: 5px solid #1e88e5;
+  animation: fadeInUp 0.4s ease both;
 }
 
 .year-card:hover, .topic-card:hover {
@@ -58,7 +98,7 @@
   background-color: #f9fbff;
 }
 
-/* Topic list styling inside year cards */
+/* --- TOPIC LIST --- */
 .topic-list {
   list-style: none;
   margin-top: 1rem;
@@ -79,15 +119,7 @@
   background: #bbdefb;
 }
 
-/* Image styling */
-.detail-image {
-  max-width: 100%;
-  border-radius: 12px;
-  margin-top: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Footer */
+/* --- FOOTER --- */
 footer {
   text-align: center;
   padding: 1rem;
@@ -102,7 +134,7 @@ footer a {
   text-decoration: underline;
 }
 
-/* Animation */
+/* --- ANIMATIONS --- */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -114,11 +146,7 @@ footer a {
   }
 }
 
-.year-card, .topic-card {
-  animation: fadeInUp 0.4s ease both;
-}
-
-/* Mobile responsive */
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
   .header-content {
     flex-direction: column;
